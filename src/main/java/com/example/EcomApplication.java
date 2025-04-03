@@ -12,13 +12,3 @@ public class EcomApplication {
         SpringApplication.run(EcomApplication.class, args);
     }
 }
-
-@RestController
-@RequestMapping("/api")
-class HelloWorldController {
-
-    @GetMapping("/hello")
-    public String sayHello() {
-        return "Hello, World!";
-    }
-}

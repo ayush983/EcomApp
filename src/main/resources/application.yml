@@ -1,1 +1,17 @@
-server.port=9090
+server:
+  port: 9090
+spring:
+  datasource:
+    url: jdbc:h2:mem:ecommerce_db  # In-memory database
+    driver-class-name: org.h2.Driver
+    username: sa  # Default user
+    password:  # No password needed by default
+  jpa:
+    database-platform: org.hibernate.dialect.H2Dialect
+    hibernate:
+      ddl-auto: update  # Automatically creates tables
+    show-sql: true  # Logs SQL queries
+  h2:
+    console:
+      enabled: true  # Enables H2 web console
+      path: /h2-console  # Accessible at http://localhost:8080/h2-console
